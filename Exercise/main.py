@@ -1,5 +1,10 @@
-from pattern import checker, circle
-resolution=int(input('Enter the resolution: '))
+from pattern import checker, Circle
+resolution=int(input('Enter the resolution for checker and circle: '))
 tile_size=int(input('Enter size of the boxes you want: '))
+radius=int(input('Enter the radius for circle: '))
+x_position = int(input("Enter X position of circle: "))
+y_position = int(input("Enter Y position of circle: "))
 chk_game=checker(resolution,tile_size)
 chk_game.show()
+circle = Circle(resolution, radius, position=(x_position,y_position))
+circle.show()

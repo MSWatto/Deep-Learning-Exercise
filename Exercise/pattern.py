@@ -19,10 +19,25 @@ class checker:
         plt.yticks([])
         plt.imshow(board, cmap='gray')
         plt.show()
-class circle:
-    def __init__(self):
-        pass
-    def draw():
-        pass
-    def show():
-        pass
+class Circle:
+    def __init__(self, resolution, radius, position):
+        self.resolution = resolution
+        self.radius = radius
+        self.position = position
+
+    def draw(self):
+        x, y = np.meshgrid(np.arange(self.resolution), np.arange(self.resolution))
+        #print(x)
+        #print(y)
+        distance = np.sqrt((x - self.position[0]) ** 2 + (y - self.position[1]) ** 2) #main logic of circle
+        #print(distance)
+        output = (distance <= self.radius).astype(np.uint8)
+        #print(output)
+        return output
+
+    def show(self):
+        output = self.draw()
+        plt.imshow(output, cmap='gray')
+        plt.xticks([])
+        plt.yticks([])
+        plt.show()
