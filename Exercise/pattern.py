@@ -12,6 +12,7 @@ class checker:
         black[0:self.tile_size,0:self.tile_size]=y
         black[self.tile_size:self.tile_size*2,self.tile_size:self.tile_size*2]=y
         array=black[0:self.tile_size*2,0:self.tile_size*2]
+        #added comment for return
         return array         
     def show(self):
         square=self.draw()
