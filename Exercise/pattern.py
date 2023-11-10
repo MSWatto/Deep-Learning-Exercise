@@ -6,6 +6,7 @@ class checker:
         self.resolution=resolution
         self.tile_size=tile_size           
     def draw(self):
+        #This is for making the array zero
         black=np.zeros((self.resolution,self.resolution), dtype=np.uint8)
         y=np.ones((self.tile_size,self.tile_size), dtype=np.uint8)
         black[0:self.tile_size,0:self.tile_size]=y
