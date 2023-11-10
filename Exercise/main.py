@@ -6,9 +6,9 @@ circle = Circle(55, 15, (30, 15))
 spectrum = Spectrum(100)
 
 
-checker.show() # Display checker pattern
-circle.show() # Display circle pattern
-spectrum.show() # Display spectrum pattern
+checker.show() 
+circle.show() 
+spectrum.show()
    
 file_path = "./exercise_data"
 label_path = "./Labels.json"
