@@ -27,9 +27,7 @@ class Checker():
     return output
 
 
-      #indices
-       #self.output=np.indices(self.resolution).sum(axis=0) % 2
-       #return self.output
+     
    
    #definition for show method
    
