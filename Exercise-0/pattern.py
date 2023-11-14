@@ -17,17 +17,21 @@ class Checker():
    
    def draw(self):
     # Create the black and white squares
+    
+    # This will create the array of zeroes [0,0,0,0]
     zero = np.zeros((self.tile_size, self.tile_size), dtype=int)
+    # This will create the array of ones [1,1,1,1]
     one = np.ones((self.tile_size, self.tile_size), dtype=int)
 
-    # Use np.block and np.tile to create the checkerboard pattern
-    pattern = np.block([[zero, one], [one, zero]])
+    # This will create pattern of zero and one
+    # By placing array in block
+    pattern = np.block([[zero, one],[one,zero]])
+    
+    #Along the rows (vertical axis), the pattern is repeated self.resolution // (2 * self.tile_size) times.
+    #Along the columns (horizontal axis), the pattern is repeated self.resolution // (2 * self.tile_size) times.
     output = np.tile(pattern, (self.resolution // (2 * self.tile_size), self.resolution // (2 * self.tile_size)))
 
     return output
-
-
-     
    
    #definition for show method
    
@@ -113,3 +117,6 @@ class Spectrum():
         plt.figure("Spectrum")
         plt.imshow(self.output)
         plt.show()
+        
+checker=Checker(8,2)
+checker.show()
