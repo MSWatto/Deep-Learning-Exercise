@@ -57,15 +57,16 @@ class Circle():
     y = np.arange(self.resolution)
 
     xx, yy = np.meshgrid(x, y)
-
     # Use meshgrid to create the grid of points
     X, Y = xx - self.position[0], yy - self.position[1]
+    #print(Y)
 
     # Compute the distance from each point to the center
     distance = np.sqrt(X**2 + Y**2)
 
     # Check if the distance is within the specified radius
     output = distance <= self.radius
+    print(output)
     return output 
 
    #definition for show method
@@ -117,6 +118,6 @@ class Spectrum():
         plt.figure("Spectrum")
         plt.imshow(self.output)
         plt.show()
-        
-checker=Checker(8,2)
-checker.show()
+
+cir=Circle(55,15,(30,15))
+cir.show()
