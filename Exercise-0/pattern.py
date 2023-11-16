@@ -108,7 +108,7 @@ class Spectrum():
         bottom_left= bottom_left1*bottom_left2
 
         bottom=bottom_right2
-
+          #This will create the rgb grid
         rgb = np.dstack((top_right+bottom_right, bottom , top_left+bottom_left)) 
         output= rgb
         return output
