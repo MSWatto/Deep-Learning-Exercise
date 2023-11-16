@@ -29,6 +29,7 @@ class Checker():
     
     #Along the rows (vertical axis), the pattern is repeated self.resolution // (2 * self.tile_size) times.
     #Along the columns (horizontal axis), the pattern is repeated self.resolution // (2 * self.tile_size) times.
+    #creating a new array by repeating the pattern array. The number of repetitions along each axis is determined by self.resolution // (2 * self.tile_size).
     output = np.tile(pattern, (self.resolution // (2 * self.tile_size), self.resolution // (2 * self.tile_size)))
 
     return output
